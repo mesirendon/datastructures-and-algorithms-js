@@ -397,5 +397,75 @@ describe('Linked lists', () => {
       expect(linkedList.head.value).to.be.equal(1);
       expect(linkedList.tail.value).to.be.equal(3);
     });
+
+    it('should tell the linked list size at any moment', () => {
+      const linkedList = new LinkedList();
+
+      expect(linkedList.length()).to.be.equal(0);
+
+      linkedList
+        .append(1)
+        .append(2)
+        .append(2)
+        .append(3)
+        .append(3);
+
+      expect(linkedList.length()).to.be.equal(5);
+
+      linkedList.deleteAll(3);
+
+      expect(linkedList.length()).to.be.equal(3);
+
+      linkedList
+        .prepend(1)
+        .prepend(1);
+
+      expect(linkedList.length()).to.be.equal(5);
+
+      linkedList.deleteAll(1);
+
+      expect(linkedList.length()).to.be.equal(2);
+
+      linkedList.deleteAll(2);
+
+      expect(linkedList.length()).to.be.equal(0);
+
+      linkedList
+        .append(1)
+        .append(2)
+        .append(3)
+        .append(5);
+
+      expect(linkedList.length()).to.be.equal(4);
+
+      linkedList
+        .insert(4, 3)
+        .insert(0, -4)
+        .insert(10, 40)
+
+      expect(linkedList.length()).to.be.equal(7);
+
+      linkedList.delete(3);
+
+      expect(linkedList.length()).to.be.equal(6);
+
+      linkedList.delete(0);
+
+      expect(linkedList.length()).to.be.equal(5);
+
+      linkedList.delete(0);
+
+      expect(linkedList.length()).to.be.equal(5);
+
+      linkedList.delete(10);
+
+      expect(linkedList.length()).to.be.equal(4);
+
+      linkedList.deleteHead()
+      linkedList.deleteTail();
+
+      expect(linkedList.length()).to.be.equal(2);
+
+    });
   });
 });

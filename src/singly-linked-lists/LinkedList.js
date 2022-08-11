@@ -13,7 +13,14 @@ export default class LinkedList {
     /** @var LinkedListNode */
     this.tail = null;
 
+    /** @var Number */
+    this.size = 0;
+
     this.comparator = new Comparator(customComparator);
+  }
+
+  length() {
+    return this.size;
   }
 
   /**
@@ -23,6 +30,7 @@ export default class LinkedList {
    */
   append(value) {
     const node = new LinkedListNode(value);
+    this.size++;
 
     // The new node is the head if this list is empty
     if (!this.head) {
@@ -54,6 +62,8 @@ export default class LinkedList {
       this.tail = node;
     }
 
+    this.size++;
+
     return this;
   }
 
@@ -68,6 +78,7 @@ export default class LinkedList {
 
     if (index === 0) this.prepend(value);
     else {
+      this.size++;
       let count = 1;
       let currentNode = this.head;
       const node = new LinkedListNode(value);
@@ -110,6 +121,7 @@ export default class LinkedList {
     if (this.head.value === value) {
       deletedNode = this.head;
       this.head = deletedNode.next;
+      this.size--;
       return deletedNode;
     }
 
@@ -122,6 +134,8 @@ export default class LinkedList {
     if (!deletedNode) return deletedNode;
     if (this.comparator.equal(deletedNode.value, this.tail.value)) this.tail = currentNode;
     currentNode.next = deletedNode.next;
+
+    this.size--;
 
     return deletedNode;
   }
@@ -142,6 +156,7 @@ export default class LinkedList {
     while (this.head && this.comparator.equal(this.head.value, value)) {
       deletedNode = this.head;
       this.head = deletedNode.next;
+      this.size--;
     }
 
     let currentNode = this.head;
@@ -151,6 +166,7 @@ export default class LinkedList {
         if (this.comparator.equal(currentNode.next.value, value)) {
           deletedNode = currentNode.next;
           currentNode.next = deletedNode.next;
+          this.size--;
         }
         else {
           currentNode = currentNode.next;
@@ -187,6 +203,7 @@ export default class LinkedList {
     deletedNode = currentNode.next;
     currentNode.next = null;
     this.tail = currentNode;
+    this.size--;
 
     return deletedNode;
   }
@@ -202,7 +219,7 @@ export default class LinkedList {
     let deletedNode = this.head;
     if (this.head === this.tail) this.tail = null;
     this.head = deletedNode.next;
-
+    this.size--;
     return deletedNode;
   }
 
