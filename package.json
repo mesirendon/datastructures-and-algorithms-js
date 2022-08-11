@@ -1,0 +1,27 @@
+{
+  "name": "datastructures-and-algorithms-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require @babel/register src/**/*.spec.js",
+    "start": "nodemon --exec 'clear;babel-node' index.js",
+    "test:case": "mocha --require @babel/register"
+  },
+  "keywords": [],
+  "author": "Mesi Rendon <hello@mesirendon.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.10",
+    "@babel/node": "^7.18.10",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-stage-3": "^7.8.3",
+    "babel-register": "^6.26.0",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19"
+  }
+}
