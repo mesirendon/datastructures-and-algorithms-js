@@ -127,6 +127,52 @@ This implementation considers three cases: **Append**, **Prepend**, and **Insert
 41 }
 ```
 
+### Deletion
+Let's consider this implementation options: **Delete at Head**, **Delete at Tail**, **Delete All Nodes With Certain Value**, **Delete a Single Node With Certain Value**. For all this option, the deleted node is returned to the user. For instance, deleting the head could be used as follows.
+
+```js
+// We create the linked list.
+const linkedList = new LinkedList();
+// We append some values.
+// 1 -> 2 -> 3 -> null
+linkedList
+  .append(1)
+  .append(2)
+  .append(3);
+
+// We delete the node. `deletedNode` is now a `LinkedListNode` with value set to 1.
+// Our linked list was left like this
+// 2 -> 3 -> null
+const deletedNode = linkedList.deleteHead();
+```
+
+#### `linkedList.deleteHead`
+By deleting the head, the user will get the node that was in the head. The linked list will have the linked list's head pointing to the previous head's next node, making it the new head, so the previous head is dettached from the list. The next's previous node is set to null. Since we can access the head immediately this operation is `O(1)` runtime complex.
+
+![Delete Linked List Head](assets/delete-head.png)
+
+```js
+1  deleteHead() {
+2    // We return null for an empty linked list.
+3    if (!this.head) return null;
+4
+5    // We create the dettached node.
+6    let deletedNode = this.head;
+7
+8    // If the linked list has only one element, we must update the tail reference as well.
+9    if (this.head === this.tail) this.tail = null;
+10
+11   // We move the linked list head to the deleted head's next node.
+12   this.head = deletedNode.next;
+13
+14   // We decrease this linked list length.
+15   this.size--;
+16
+17   // We return the dettached node.
+18   return deletedNode;
+19 }
+```
+
 ## Runtime Complexity Overview
 | Access | Search | Insertion                  | Deletion                   |
 |:------:|:------:|:--------------------------:|:--------------------------:|
