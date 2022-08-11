@@ -4,3 +4,5 @@ Linked lists are linear dynamic data structures able to manage memory at runtime
 Elements in a linked list can point to the next element, rather than letting the data structure pointing to a specific physical memory location. These elements are widely known as Linked List Nodes or simply Nodes.
 
 Nodes represent not only a value, but a reference to the next node (i.e. next node's memory address). This extra reference is known as Link.
+
+![Linked List](assets/linked-list.png)
