@@ -18,6 +18,12 @@ The available operations are as follows.
 ### `linkedList.length`
 This operation has `O(1)` runtime since keeping the internal `size` variable updated is the key at insertion and deletion.
 
+```js
+1 length() {
+2   return this.size;
+3 }
+```
+
 ### Insertion
 This implementation considers three cases: **Append**, **Prepend**, and **Insert** at a given position.
 
