@@ -7,7 +7,23 @@ Nodes represent not only a value, but a reference to the next node (i.e. next no
 
 ![Linked List](assets/linked-list.png)
 
-## Complexity
-| Access | Search | Insertion              | Deletion               |
-|:------:|:------:|:----------------------:|:----------------------:|
-| O(n)   | O(n)   | O(n) O(1) at beginning | O(n) O(1) at beginning |
+## Operations
+Consider having a linked list initialized as
+```js
+const linkedList = new LinkedList();
+```
+
+The available operations are as follows.
+
+### `linkedList.length`
+This operation has `O(1)` runtime since keeping the internal `size` variable updated is the key at insertion and deletion.
+
+### `linkedList.append`
+
+## Runtime Complexity
+| Access | Search | Insertion                  | Deletion                   |
+|:------:|:------:|:--------------------------:|:--------------------------:|
+| `O(n)` | `O(n)` | `O(n)` `O(1)` at beginning | `O(n)` `O(1)` at beginning |`
+
+## Space Complexity
+Linked lists have `O(n)` space complexity.
