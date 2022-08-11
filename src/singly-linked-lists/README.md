@@ -173,6 +173,11 @@ By deleting the head, the user will get the node that was in the head. The linke
 19 }
 ```
 
+#### `linkedList.deleteTail`
+By deleting the tail, the user will get the node that was in the tail. The linked list will have the linked list's tail dettached. However, the tail's previous node cannot be easily tracked (this is discussed on doubly linked lists topic), thus, forcing us to traverse to the `n-1th` node. Once there, we make the `n-1th` node the new tail, pointing its next node to `null`. This situation makes this operation `O(n)` runtime complex.
+
+![Delete Linked List Tail](assets/delete-tail.png)
+
 ## Runtime Complexity Overview
 | Access | Search | Insertion                  | Deletion                   |
 |:------:|:------:|:--------------------------:|:--------------------------:|
