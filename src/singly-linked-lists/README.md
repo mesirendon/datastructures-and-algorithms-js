@@ -178,6 +178,43 @@ By deleting the tail, the user will get the node that was in the tail. The linke
 
 ![Delete Linked List Tail](assets/delete-tail.png)
 
+```js
+1  deleteTail() {
+2    // If the linked list is empty we return null.
+3    if (!this.head) return null;
+4 
+5    let deletedNode = null;
+6 
+7    // We delete the head if this linked list has only one node.
+8    if (!this.head.next) {
+9      deletedNode = this.head;
+10     this.head = null;
+11     this.tail = null;
+12     return deletedNode;
+13   }
+14
+15   // We traverse up to the n-1th node
+16   let currentNode = this.head;
+17   while (currentNode.next.next) {
+18     currentNode = currentNode.next;
+19   }
+10
+20   // We set the deleted node, not to the tail, but the n-1th node's next node.
+21   deletedNode = currentNode.next;
+22
+23   // We dettach the tail out of the n-1th node.
+24   currentNode.next = null;
+25
+26   // We update this linked list's tail reference.
+27   this.tail = currentNode;
+28
+29   // We decrease this linked list length.
+30   this.size--;
+31
+32   return deletedNode;
+33 }
+```
+
 ## Runtime Complexity Overview
 | Access | Search | Insertion                  | Deletion                   |
 |:------:|:------:|:--------------------------:|:--------------------------:|
