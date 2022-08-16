@@ -24,7 +24,7 @@ export default class LinkedList {
   }
 
   /**
-   * 
+   * Appends a new node to this linked list.
    * @param {any} value Value to append
    * @returns {LinkedList} This linked list
    */
