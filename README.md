@@ -15,7 +15,7 @@ JavaScript is also a flexible language that allows performing actions that could
 ## Data Structures
 Data is a broad term that could mean any kind of information. Structuring such information is related to how organize it and store it for future access or manipulation in an efficient manner.
 
-* [Singly Linked List](src/singly-linked-lists)
+* [Singly Linked List](src/singly-linked-lists/Linked%20Lists.ipynb)
 
 ## Using this repository
 
