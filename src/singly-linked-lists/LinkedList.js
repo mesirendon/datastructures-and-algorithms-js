@@ -3,8 +3,10 @@ import Comparator from '../utils/comparator';
 
 export default class LinkedList {
   /**
-   * Builds a linked list with custom comparator function or default comparator if none is given.
-   * @param {Function} customComparator Initialize this linked list with a custom comparator function
+   * Builds a linked list with custom comparator function or default
+   * comparator if none is given.
+   * @param {Function} customComparator Initialize this linked list with a
+   * custom comparator function
    */
   constructor(customComparator = null) {
     /** @var LinkedListNode */
@@ -132,7 +134,8 @@ export default class LinkedList {
 
     deletedNode = currentNode.next;
     if (!deletedNode) return deletedNode;
-    if (this.comparator.equal(deletedNode.value, this.tail.value)) this.tail = currentNode;
+    if (this.comparator.equal(deletedNode.value, this.tail.value))
+      this.tail = currentNode;
     currentNode.next = deletedNode.next;
 
     this.size--;
@@ -146,7 +149,8 @@ export default class LinkedList {
    * Returns a single deleted node, or null if the linked list is empty.
    *
    * @param {any} value Value to be deleted from this linked list
-   * @returns {(LinkedList|null)} This linked list without nodes having the specified value
+   * @returns {(LinkedList|null)} This linked list without nodes having the
+   * specified value
    */
   deleteAll(value) {
     if (!this.head) return null;
@@ -179,9 +183,10 @@ export default class LinkedList {
   }
 
   /**
-   * Deletes the tail, updating this linked list new tail and returning the deleted
-   * node. Returns null if the linked list is empty.
-   * @returns {(LinkedListNode|null)} The tail node of this linked list if it exists
+   * Deletes the tail, updating this linked list new tail and returning the
+   * deleted node. Returns null if the linked list is empty.
+   * @returns {(LinkedListNode|null)} The tail node of this linked list if
+   * it exists
    */
   deleteTail() {
     if (!this.head) return null;
@@ -209,7 +214,8 @@ export default class LinkedList {
   }
 
   /**
-   * Deletes this linked list head and returns it if it exists. Updates references to
+   * Deletes this linked list head and returns it if it exists. Updates
+   * references to
    * new head and tail if applies.
    * @returns {(LinkedListNode|null)}
    */
