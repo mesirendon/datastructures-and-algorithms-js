@@ -1,4 +1,6 @@
 # Data Structures and Algorithms
+[![codecov](https://codecov.io/gh/mesirendon/datastructures-and-algorithms-js/branch/main/graph/badge.svg?token=G7ACV97AFD)](https://codecov.io/gh/mesirendon/datastructures-and-algorithms-js)
+
 This repository written in JavaScript is a compilation of the most-known data structures and algorithms.
 
 ## Disclaimer ⚠️
