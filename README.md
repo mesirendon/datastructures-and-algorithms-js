@@ -42,6 +42,7 @@ npm ci
 ### Run tests
 
 #### All
+Running all tests will show a coverage report.
 ```bash
 npm test
 ```
