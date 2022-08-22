@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require @babel/register src/**/*.spec.js",
+    "test": "nyc --reporter=text mocha --require @babel/register src/**/*.spec.js && codecov",
     "start": "nodemon --exec 'clear;babel-node' index.js",
     "test:case": "mocha --require @babel/register"
   },
@@ -22,6 +22,7 @@
     "babel-register": "^6.26.0",
     "chai": "^4.3.6",
     "mocha": "^10.0.0",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "nyc": "^15.1.0"
   }
 }
