@@ -257,4 +257,17 @@ describe('Doubly Linked List', () => {
     expect(linkedList.tail.previous.previous.value).to.be.equal(2);
     expect(linkedList.tail.previous.previous.previous.value).to.be.equal(1);
   });
+
+  it('should find preferring callback over compare function', () => {
+    const greaterThan = (value, compareTo) => (value > compareTo ? 0 : 1);
+
+    const linkedList = new DoublyLinkedList(greaterThan);
+    linkedList.fromArray([1, 2, 3, 4, 5]);
+
+    let node = linkedList.find(3);
+    expect(node.value).to.be.equal(4);
+
+    node = linkedList.find((value) => value < 3 );
+    expect(node.value).to.be.equal(1);
+  });
 });
