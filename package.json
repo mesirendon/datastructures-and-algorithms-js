@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=text mocha --require @babel/register src/**/*.spec.js && codecov",
+    "test": "nyc --reporter=text mocha --require @babel/register src/**/*.spec.js",
+    "coverage": "codecov",
     "start": "nodemon --exec 'clear;babel-node' index.js",
     "test:case": "mocha --require @babel/register"
   },
