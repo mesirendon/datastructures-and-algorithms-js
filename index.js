@@ -1,20 +1,24 @@
-const hi = _ => 'Hello World!';
+import DoublyLinkedList from "./src/data-structures/doubly-linked-lists/DoublyLinkedList";
 
-export { hi };
+const ll = new DoublyLinkedList();
 
-import LinkedList from './src/singly-linked-lists/LinkedList';
+const array = [
+  {value: 1, key: 'test1'},
+  {value: 2, key: 'test2'},
+  {value: 3, key: 'test3'},
+  {value: 4, key: 'test4'},
+  {value: 5, key: 'test5'},
+  {value: 6, key: 'test6'},
+];
 
-console.log(hi());
+ll.fromArray(array);
 
-const linkedList = new LinkedList();
+const stringifier = ({key, value}) => `\nKey: ${key} | Value: ${value}\n`;
 
-linkedList
-  .append({value: 1, key: 'val-1'})
-  .append({value: 2, key: 'val-2'})
-  .append({value: 3, key: 'val-3'})
-  .append({value: 4, key: 'val-4'})
-  .prepend({value: 0, key: 'val-0'});
+console.log(ll.toString(stringifier));
 
-const formatter = ({value, key}) => ` Key: ${key} | Value: ${value}`
-console.log(linkedList.toString(formatter));
-console.log(linkedList.length());
+const finder = (val) => val.value === 4;
+
+let node = ll.find(finder)
+
+console.log(node);
