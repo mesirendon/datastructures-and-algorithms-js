@@ -1,4 +1,4 @@
-import Comparator from '../utils/comparator';
+import Comparator from '../../utils/comparator';
 import DoublyLinkedListNode from './DoublyLinkedListNode';
 
 export default class DoublyLinkedList {

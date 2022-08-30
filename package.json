@@ -25,5 +25,8 @@
     "mocha": "^10.0.0",
     "nodemon": "^2.0.19",
     "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "plotly-notebook-js": "^0.1.2"
   }
 }
