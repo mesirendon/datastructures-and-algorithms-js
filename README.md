@@ -10,7 +10,7 @@ It's usual to see data structures and algorithms taught in Java. However, gettin
 JavaScript is also a flexible language that allows performing actions that could save time and helps explain a concept. If you want to transpile this knowledge to any other language, it might be easier for you after understanding what's presented here.
 
 ## The Book
-Read all the content of [**Data Structures and Algorithms** here](BOOK.md)
+Read all the content of [**Data Structures and Algorithms** here](content.md)
 
 ## Using this repository
 
