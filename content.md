@@ -17,4 +17,4 @@
     * Tests
       * [Doubly Linked List Node](src/data-structures/doubly-linked-lists/__test__/doubly-linked-list-node.spec.js)
       * [Doubly Linked List Wrapper](src/data-structures/doubly-linked-lists/__test__/doubly-linked-list.spec.js)
-      * **TODO:** List of exercises
+    * **TODO:** List of exercises`]
