@@ -1,5 +1,5 @@
-import Comparator from '../../utils/comparator';
-import DoublyLinkedListNode from './DoublyLinkedListNode';
+import Comparator from "../../utils/comparator.js";
+import DoublyLinkedListNode from "./DoublyLinkedListNode.js";
 
 export default class DoublyLinkedList {
   /**
@@ -227,8 +227,7 @@ export default class DoublyLinkedList {
         deleted.next = null;
         deleted.previous = null;
         this.length--;
-      }
-      else currentNode = currentNode.next;
+      } else currentNode = currentNode.next;
     }
 
     return deleted;
@@ -247,9 +246,10 @@ export default class DoublyLinkedList {
 
     let currentNode = this.head;
     while (currentNode) {
-      if (finder instanceof Function &&
-        finder(currentNode.value) ||
-        this.comparator.equal(currentNode.value, finder)) {
+      if (
+        (finder instanceof Function && finder(currentNode.value)) ||
+        this.comparator.equal(currentNode.value, finder)
+      ) {
         let found = currentNode;
         found.next = null;
         found.previous = null;
@@ -332,8 +332,6 @@ export default class DoublyLinkedList {
    */
   toString(stringifier) {
     const nodes = this.toArray();
-    return nodes
-      .map((node) => node.toString(stringifier))
-      .join('<=>');
+    return nodes.map((node) => node.toString(stringifier)).join("<=>");
   }
 }

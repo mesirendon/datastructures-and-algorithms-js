@@ -11,7 +11,7 @@ export default class LinkedListNode {
 
   /**
    * Returns a string representation of this node.
-   * 
+   *
    * Could be specified through a function.
    * @param {function} customFn Custom stringifier
    * @returns {string} This node string representation

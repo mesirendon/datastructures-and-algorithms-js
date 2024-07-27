@@ -1,5 +1,5 @@
 import LinkedListNode from "./LinkedListNode.js";
-import Comparator from '../../utils/comparator';
+import Comparator from "../../utils/comparator.js";
 
 export default class LinkedList {
   /**
@@ -70,7 +70,7 @@ export default class LinkedList {
   }
 
   /**
-   * 
+   *
    * @param {any} value The value to insert in this linked list
    * @param {number} rawIndex The position where the value must be inserted at
    * @returns {LinkedList} This linked list
@@ -92,13 +92,11 @@ export default class LinkedList {
       if (currentNode) {
         node.next = currentNode.next;
         currentNode.next = node;
-      }
-      else {
+      } else {
         if (this.tail) {
           this.tail.next = node;
           this.tail = node;
-        }
-        else {
+        } else {
           this.head = node;
           this.tail = node;
         }
@@ -171,8 +169,7 @@ export default class LinkedList {
           deletedNode = currentNode.next;
           currentNode.next = deletedNode.next;
           this.size--;
-        }
-        else {
+        } else {
           currentNode = currentNode.next;
         }
       }
@@ -242,11 +239,13 @@ export default class LinkedList {
 
     let currentNode = this.head;
     while (currentNode) {
-      if (callback && callback(currentNode.value))
+      if (callback && callback(currentNode.value)) return currentNode;
+      if (
+        value !== undefined &&
+        this.comparator.equal(currentNode.value, value)
+      )
         return currentNode;
-      if (value !== undefined && this.comparator.equal(currentNode.value, value))
-        return currentNode;
-      currentNode = currentNode.next
+      currentNode = currentNode.next;
     }
 
     return null;
@@ -275,13 +274,13 @@ export default class LinkedList {
       currentNode = currentNode.next;
     }
 
-    return nodes
+    return nodes;
   }
 
   /**
-  * Reverse a linked list.
-  * @returns {LinkedList}
-  */
+   * Reverse a linked list.
+   * @returns {LinkedList}
+   */
   reverse() {
     let currNode = this.head;
     let prevNode = null;
@@ -311,6 +310,8 @@ export default class LinkedList {
    * @returns {string} This linked list string representation
    */
   toString(stringifierFn) {
-    return this.toArray().map(n => n.toString(stringifierFn)).toString();
+    return this.toArray()
+      .map((n) => n.toString(stringifierFn))
+      .toString();
   }
 }

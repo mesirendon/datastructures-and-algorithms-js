@@ -3,7 +3,7 @@ export default class DoublyLinkedListNode {
    * Creates a Doubly Linked List Node
    * @param {any} value
    * @param {DoublyLinkedListNode} next
-   * @param {DoublyLinkedListNode} previous 
+   * @param {DoublyLinkedListNode} previous
    */
   constructor(value, next = null, previous = null) {
     this.value = value;
@@ -13,10 +13,10 @@ export default class DoublyLinkedListNode {
 
   /**
    * Returns a string representation of this node.
-   * 
+   *
    * If no stringifier function is defined, the representation
    * is a string of this node's value.
-   * 
+   *
    * Stringifier example:
    * @example
    * const node = new DoublyLinkedListNode({value: 2, key: 'one'});
@@ -26,8 +26,6 @@ export default class DoublyLinkedListNode {
    * @returns {String}
    */
   toString(stringifier = null) {
-    return stringifier
-      ? stringifier(this.value)
-      : `${this.value}`;
+    return stringifier ? stringifier(this.value) : `${this.value}`;
   }
 }
