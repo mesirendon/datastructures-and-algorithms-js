@@ -16,33 +16,43 @@ JavaScript is also a flexible language that allows performing actions that could
 Read all the content of [**Data Structures and Algorithms** here](./content.md)
 
 ## Using this repository
+
 ### Prerequisites
+
 You will need to have node installed. I recommend using the [nvm installer script](https://github.com/nvm-sh/nvm#install--update-script), and following their [instructions](https://github.com/nvm-sh/nvm#usage). I recommend using the `v20.12.2` version.
 
 ### Clone
+
 ```bash
 git clone git@github.com:mesirendon/datastructures-and-algorithms-js.git
 ```
 
 ### Install dependencies
+
 ```bash
 npm ci
 ```
 
 ### Run tests
+
 #### All Tests
+
 Running all tests will show a coverage report.
+
 ```bash
 npm t
 ```
 
 #### Specific
+
 ```bash
 npm run test:case src/singly-linked-lists/__test__/linked-lists.spec.js
 ```
 
 ### Start the app
+
 You can use the provided index.js as a playground by running in a console the following command.
+
 ```bash
 npm start
 ```
@@ -50,7 +60,9 @@ npm start
 When you modify the [index.js](./index.js) file and save it, the service will be reloaded.
 
 ## Disclaimer ⚠️
+
 This repository is meant to be used as an educational and research tool. Therefore, you should think twice before copying and pasting the code seen here in your production developments. Also, remember this code is licensed under [MIT License](./LICENSE), thus limiting any warranty or liability for its use.
 
 ## Acknowledgement
+
 [Trekhleb](https://github.com/trekhleb)'s [JavaScript Algorithms](https://github.com/trekhleb/javascript-algorithms) repository heavily inspires this repository.

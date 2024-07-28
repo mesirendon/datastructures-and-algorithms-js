@@ -24,4 +24,11 @@
       - [Queue Wrapper](./src/data-structures/queues/Queue.js)
     - Tests
       - [Queue Node and Queue Wrapper](./src/data-structures/queues/__test__/queue.spec.js)
+  - [Stack](./src/data-structures/stack/Stack.ipynb)
+    - Implementation
+      - [Stack Node](./src/data-structures/stack/StackNode.js)
+      - [Stack Wrapper](./src/data-structures/stack/Stack.js)
+    - Tests
+      - [Stack Node and Stack Wrapper](./src/data-structures/stack/__test__/stack.spec.js)
     - **TODO:** List of exercises
+    - **TODO:** Applications?

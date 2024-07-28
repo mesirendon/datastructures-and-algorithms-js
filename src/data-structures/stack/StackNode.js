@@ -1,8 +1,8 @@
-export default class QueueNode {
+export default class StackNode {
   /**
-   * Builds a Queue Node
-   * @param {any} value Queue Node Value
-   * @param {QueueNode} next Next Queue node
+   * Builds a Stack Node
+   * @param {any} value Stack Node Value
+   * @param {StackNode} next Next Stack Node
    */
   constructor(value, next = null) {
     this.value = value;
@@ -10,10 +10,10 @@ export default class QueueNode {
   }
 
   /**
-   *  Returns a string representation of this node.
+   * Returns a string representation of this node.
    *
    * Could be specified through a function.
-   * @param {function} customFn  Custom stringifier
+   * @param {function} customFn Custom stringifier
    * @returns {string} This node string representation
    */
   toString(customFn = null) {
