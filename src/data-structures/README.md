@@ -1,7 +1,6 @@
 [Back to Content](../../content.md)
 
 # Data Structures
-
 Data is a broad term that could mean any type of information. Structuring such information is related to organizing and storing it for future access or manipulation in an efficient manner.
 
 **Note on exercises**: I'm not using the actual implementation here because

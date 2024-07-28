@@ -74,7 +74,7 @@ describe("Linked lists", () => {
       linkedList.append(1);
       linkedList.append(2);
       linkedList.append(3);
-
+      ``;
       expect(linkedList.toArray().join(",")).to.be.eq("1,2,3");
     });
 
