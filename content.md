@@ -31,4 +31,4 @@
     - Tests
       - [Stack Node and Stack Wrapper](./src/data-structures/stack/__test__/stack.spec.js)
     - **TODO:** List of exercises
-    - **TODO:** Applications?
+ 
